@@ -18,3 +18,7 @@ logs
 __pycache__/
 *.pyc
 *.pyo
+
+build/*
+dist 
+aetherdb.spec
