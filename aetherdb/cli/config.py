@@ -6,6 +6,7 @@ PROFILE_FILE = str(Path.home() / ".aetherdb_profiles.json")
 DEFAULT_PROFILE = {
     "host": "127.0.0.1",
     "user": "aether",
+    "port": 5432,
     "database": "aetherdb"
 }
 
