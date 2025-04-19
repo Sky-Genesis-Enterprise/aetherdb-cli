@@ -3,8 +3,7 @@ logs
 *.log
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
+.vscode/
 .idea
 .DS_Store
 *.suo
@@ -13,12 +12,52 @@ logs
 *.sln
 *.sw?
 
-# Python
-.venv/
+# Python bytecode
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
 
-build/*
-dist 
-aetherdb.spec
+# Virtual environment
+.venv/
+env/
+ENV/
+venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# PyInstaller
+# Usually these files are written by a Python script from a template
+# before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# pyenv
+.python-version
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
