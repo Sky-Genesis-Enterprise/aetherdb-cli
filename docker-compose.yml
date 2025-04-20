@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  aetherdb:
+    build: .
+    container_name: aetherdb
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - AETHERDB_URL=aetherdb://aetherdb:aetherdb@db:8000/aetherdb
+    depends_on:
+      - db
+
+  db:
+    build: .
+    container_name: aetherdb_db
+    environment:
+      - AETHERDB_USER=aetherdb
+      - AETHERDB_PASSWORD=aetherdb
+      - AETHERDB_DB=aetherdb
+    volumes:
+      - aetherdb_data:/var/lib/aetherdb/data
+
+volumes:
+  aetherdb_data:
